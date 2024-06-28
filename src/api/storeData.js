@@ -13,13 +13,13 @@ export const storeData = [
   },
   {
     id: 3,
-    name: "Cookie Farm",
+    name: "Data Farm",
     cost: 1000,
     increase: 10,
   },
   {
     id: 4,
-    name: "Robot Baker",
+    name: "Ai Cyborg",
     cost: 2000,
     increase: 20,
   },
