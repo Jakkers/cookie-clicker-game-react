@@ -16,7 +16,7 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .bitcoin-logo {
+  .bitcoin-logo {
     animation: bitcoin-logo-rotate infinite 20s linear;
   }
 }
