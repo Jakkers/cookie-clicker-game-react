@@ -1,7 +1,9 @@
 //! You are supposed to organise and plan all these elements into different folders and componenets
 
 import { useEffect, useState } from "react";
+import Nav from "./components/Nav";
 import "./App.css";
+import CookieHeader from "./components/CookieHeader";
 
 export default function App() {
   //I need a list of shop upgrades for the user to buy.
@@ -38,7 +40,8 @@ export default function App() {
 
   return (
     <>
-      <h1>Main app</h1>
+      <Nav />
+      <CookieHeader />
       {/* I need to display the following elements on te page:
       - the value of cookies
       - the value of cps

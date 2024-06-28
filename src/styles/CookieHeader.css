@@ -1,0 +1,22 @@
+.bitcoin-logo {
+  width: 30vw;
+  /* animation-name: bitcoin-logo-rotate;
+  animation-iteration-count: infinite; */
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+@keyframes bitcoin-logo-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .bitcoin-logo {
+    animation: bitcoin-logo-rotate infinite 20s linear;
+  }
+}
