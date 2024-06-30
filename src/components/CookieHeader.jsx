@@ -1,12 +1,22 @@
 import "../styles/CookieHeader.css";
 // import { useTimer } from "../utils/useTimer";
 import Shop from "./Shop";
+import Nav from "./Nav";
 import { useState } from "react";
 import { useEffect } from "react";
 
 export default function CookieHeader() {
-  const [cookies, setCookies] = useState(0);
-  const [cps, setCps] = useState(1);
+  const [cookies, setCookies] = useState(
+    parseInt(localStorage.getItem("cookies")) || 0
+  );
+  const [cps, setCps] = useState(parseInt(localStorage.getItem("cps")) || 0);
+
+  // Store cookies and cps to local storage
+  useEffect(() => {
+    localStorage.setItem("cookies", cookies.toString());
+    localStorage.setItem("cps", cps.toString());
+  }, [cookies, cps]);
+
   useEffect(() => {
     const cookieInterval = setInterval(() => {
       setCookies((currentCookies) => {
@@ -25,21 +35,37 @@ export default function CookieHeader() {
   }
 
   return (
-    <div className="cookie-header">
-      <img
-        className="bitcoin-logo"
-        src="/images/bitcoin-btc-logo.svg"
-        alt="bitcoin logo - click to mine"
-        onClick={handleClick}
-      />
-      <h2>{cookies}</h2>
-      <h3>{cps}</h3>
-      <Shop
+    <>
+      <Nav
         cookies={cookies}
         setCookies={setCookies}
         cps={cps}
         setCps={setCps}
       />
-    </div>
+      <div className="cookie-header">
+        <img
+          className="cookie-logo"
+          src="/images/cookie.svg"
+          alt="cookie - click to bake"
+          onClick={handleClick}
+        />
+        <div className="cookie-info-box">
+          <div className="total-cookies-box">
+            <p>Cookies</p>
+            <h2>{cookies}</h2>
+          </div>
+          <div className="cookies-per-second-box">
+            <p>Cookies per second</p>
+            <h2>{cps} cps</h2>
+          </div>
+        </div>
+        <Shop
+          cookies={cookies}
+          setCookies={setCookies}
+          cps={cps}
+          setCps={setCps}
+        />
+      </div>
+    </>
   );
 }

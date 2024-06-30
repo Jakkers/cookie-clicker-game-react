@@ -1,16 +1,19 @@
 .cookie-header {
-  width: 100vw;
+  width: 100dvw;
+  justify-content: center;
+  align-items: center;
 }
 
-.bitcoin-logo {
-  width: 30vw;
-  /* animation-name: bitcoin-logo-rotate;
+.cookie-logo {
+  width: 400px;
+  /* animation-name: cookie-logo-rotate;
   animation-iteration-count: infinite; */
   will-change: filter;
   transition: filter 300ms;
+  padding-bottom: 20px;
 }
 
-@keyframes bitcoin-logo-rotate {
+@keyframes cookie-logo-rotate {
   from {
     transform: rotate(0deg);
   }
@@ -20,7 +23,30 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .bitcoin-logo {
-    animation: bitcoin-logo-rotate infinite 20s linear;
+  .cookie-logo {
+    animation: cookie-logo-rotate infinite 20s linear;
   }
+}
+
+.cookie-logo:hover {
+  filter: drop-shadow(0 0 2em #f7931a);
+}
+.cookie-logo.react:hover {
+  filter: drop-shadow(0 0 2em #f7931a);
+}
+
+.cookie-info-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.total-cookies-box {
+  text-align: left;
+  flex-basis: 30ch;
+}
+
+.cookies-per-second-box {
+  text-align: right;
 }

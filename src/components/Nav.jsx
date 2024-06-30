@@ -1,9 +1,15 @@
 import "../styles/Nav.css";
 
-export default function Nav() {
+export default function Nav({ cookies, setCookies, cps, setCps }) {
+  function Reset() {
+    setCookies(0), setCps(0);
+  }
   return (
     <div className="nav-bar">
-      <h1 className="title-text">⛏️ Bitcoin miner ⛏️</h1>
+      <h1 className="title-text">Cookie Clicker</h1>
+      <button onClick={Reset} className="button-reset">
+        Reset
+      </button>
     </div>
   );
 }

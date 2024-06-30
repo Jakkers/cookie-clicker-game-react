@@ -1,8 +1,33 @@
 .nav-bar {
   width: 100vw;
   height: 100px;
+  display: flex;
+  justify-content: center;
 }
 
 .title-text {
   font-family: "Courier New", Courier, monospace;
+  padding-right: 50px;
+}
+
+.button-reset {
+  width: 100px;
+  height: 2em;
+  background-color: #f7931a;
+  font-weight: bold;
+  color: white;
+  border: solid transparent;
+  border-radius: 15px;
+  margin-top: 23px;
+}
+
+.button-reset:hover {
+  width: 100px;
+  height: 2em;
+  background-color: white;
+  font-weight: bold;
+  color: #f7931a;
+  border: solid #f7931a;
+  border-radius: 15px;
+  margin-top: 23px;
 }
