@@ -4,15 +4,9 @@ import ShopButton from "./ShopButton";
 import "../styles/Shop.css";
 
 export default function Shop({ cookies, setCookies, cps, setCps }) {
-  // const cost = storeData[0].increase;
-  // function handleBuy() {
-  //   setCps(cps + cost);
-  // }
-
-  //adding conditional rendering for the buy button
-
   const [items, setItems] = useState([]);
 
+  //fetching api data
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(
@@ -39,18 +33,6 @@ export default function Shop({ cookies, setCookies, cps, setCps }) {
               setCps={setCps}
               item={item}
             />
-            {/* <button
-              className="button"
-              onClick={() => {
-                if (cookies >= item.cost) {
-                  setCookies((cookies) => cookies - item.cost);
-                  setCps(cps + item.increase);
-                }
-              }}
-              id={item.increase}
-            >
-              +{item.increase}
-            </button> */}
           </div>
         ))}
       </div>

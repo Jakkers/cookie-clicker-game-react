@@ -36,8 +36,8 @@
 What went really well and what could have gone better?
 
 - I think getting the app functional went much smoother and quicker than doing it in Vanilla js.
-
 - Going foward I would like to experiment more with pop-up messages to improve the user experience even more.
+- Also I would have liked to add a conditional render for levels, so as the user reaches a set amount of cookies, the styling looks different, for example instead of a cookie the game could change to Moon miner and generate an outer space theme with the icon changing and the background changing.
 
 # Wireframe
 
@@ -49,6 +49,23 @@ What went really well and what could have gone better?
 
 - The flow differed from the initial plan due to the Custom Hook not working as planned and had to pivot to using a component instead.
 
+# User stories
+
+- 🐿️ As a user, I want to be able to click the cookie and increment the counter
+- 🐿️ As a user, I want to see the counter automatically increment using an interval timer
+- 🐿️ As a user, I want to purchase items i can afford in the shop and increase the number of cookies every time the interval passes
+
+## Stretch user stories
+
+- 🐿️ As a user, I want to have the game playable on both mobile and desktop.
+- 🐿️ As a user, I want to have feedback on what I can buy.
+
+# Attributions
+
+- Cookie vector image: <a href="https://www.vecteezy.com/free-vector/cookies">Cookies Vectors by Vecteezy</a>
+- Theo, Richard, Manny & Joe for discussions and debugging together.
+- Adapted keyframe animations from Vite's React template.
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -57,9 +74,3 @@ Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-# Attributions
-
-- Cookie vector image: <a href="https://www.vecteezy.com/free-vector/cookies">Cookies Vectors by Vecteezy</a>
-- Theo, Richard, Manny & Joe for discussions and debugging together.
-- Adapted keyframe animations from Vite's React template.

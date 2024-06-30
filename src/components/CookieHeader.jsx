@@ -6,17 +6,18 @@ import { useState } from "react";
 import { useEffect } from "react";
 
 export default function CookieHeader() {
+  // Store cookies and cps to local storage
   const [cookies, setCookies] = useState(
     parseInt(localStorage.getItem("cookies")) || 0
   );
   const [cps, setCps] = useState(parseInt(localStorage.getItem("cps")) || 0);
 
-  // Store cookies and cps to local storage
   useEffect(() => {
     localStorage.setItem("cookies", cookies.toString());
     localStorage.setItem("cps", cps.toString());
   }, [cookies, cps]);
 
+  //Timer to track cps and increase cookies
   useEffect(() => {
     const cookieInterval = setInterval(() => {
       setCookies((currentCookies) => {
@@ -26,10 +27,7 @@ export default function CookieHeader() {
     return () => clearInterval(cookieInterval);
   }, [cps]);
 
-  //   click to add a cookie
-  //   function handleBuy() {
-  //     setTotalCookies(totalCookies + 2);
-
+  //increase cookies on click
   function handleClick() {
     setCookies(cookies + 1);
   }
