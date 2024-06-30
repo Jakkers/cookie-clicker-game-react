@@ -35,6 +35,14 @@
   filter: drop-shadow(0 0 2em #f7931a);
 }
 
+.cookie-logo:active {
+  filter: drop-shadow(0 0 2em #6c400a);
+}
+
+.cookie-logo.react:active {
+  filter: drop-shadow(0 0 2em #6c400a);
+}
+
 .cookie-info-box {
   display: flex;
   flex-direction: row;

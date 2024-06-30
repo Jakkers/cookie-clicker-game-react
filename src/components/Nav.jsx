@@ -1,6 +1,6 @@
 import "../styles/Nav.css";
 
-export default function Nav({ cookies, setCookies, cps, setCps }) {
+export default function Nav({ setCookies, setCps }) {
   function Reset() {
     setCookies(0), setCps(0);
   }

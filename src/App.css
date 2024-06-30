@@ -4,6 +4,8 @@
   padding: 2rem;
   text-align: center;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  justify-content: center;
+  align-items: center;
 }
 
 .button {
@@ -18,6 +20,28 @@
 }
 
 .button:hover {
+  width: 100px;
+  height: 2em;
+  background-color: white;
+  font-weight: bold;
+  color: #f7931a;
+  border: solid #f7931a;
+  border-radius: 15px;
+  margin-top: 13px;
+}
+
+.shop-button {
+  width: 100px;
+  height: 2em;
+  background-color: #f7931a;
+  font-weight: bold;
+  color: white;
+  border: solid transparent;
+  border-radius: 15px;
+  margin-top: 13px;
+}
+
+.shop-button:hover {
   width: 100px;
   height: 2em;
   background-color: white;
